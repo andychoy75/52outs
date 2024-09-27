@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-© 2024 Andy Choy testing URL hiding w/o restore
+© 2024 Andy Choy w/o restore 2
 
 <html lang="en">
 <head>
@@ -84,27 +84,32 @@
 
     
     <script>
-        let lastY = 0;
+   
+let lastY = 0;
+let menuHidden = false;
 
-        window.addEventListener('touchstart', (event) => {
-            if (event.touches.length > 0) {
-                lastY = event.touches[0].clientY;
-            }
-        });
+window.addEventListener('touchstart', (event) => {
+    if (event.touches.length > 0) {
+        lastY = event.touches[0].clientY;
+    }
+});
 
-        window.addEventListener('touchmove', (event) => {
-            if (event.touches.length > 0) {
-                const currentY = event.touches[0].clientY;
-                const swipeDistance = lastY - currentY;
+window.addEventListener('touchmove', (event) => {
+    if (event.touches.length > 0 && !menuHidden) {
+        const currentY = event.touches[0].clientY;
+        const swipeDistance = lastY - currentY;
 
-                // Detect swipe up (you can adjust the threshold)
-                if (swipeDistance > 1) {
-                    document.body.style.overflow = 'hidden'; // Hide the menu bar
-                }
-                lastY = currentY;
-            }
-        });
+        // Detect swipe up (you can adjust the threshold)
+        if (swipeDistance > 30) {
+            document.querySelector('.menu').style.display = 'none'; // Hide the menu
+            menuHidden = true; // Set flag to true
+        }
+        lastY = currentY;
+    }
+});
 
+
+        
     </script>
     
 
