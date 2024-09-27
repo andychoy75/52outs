@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-© 2024 Andy Choy testing boxes and background
+© 2024 Andy Choy testing URL hiding
 
 <html lang="en">
 <head>
@@ -82,6 +82,34 @@
 </head>
 <body>
 
+    
+    <script>
+        let lastY = 0;
+
+        window.addEventListener('touchstart', (event) => {
+            if (event.touches.length > 0) {
+                lastY = event.touches[0].clientY;
+            }
+        });
+
+        window.addEventListener('touchmove', (event) => {
+            if (event.touches.length > 0) {
+                const currentY = event.touches[0].clientY;
+                const swipeDistance = lastY - currentY;
+
+                // Detect swipe up (you can adjust the threshold)
+                if (swipeDistance > 30) {
+                    document.body.style.overflow = 'hidden'; // Hide the menu bar
+                }
+                lastY = currentY;
+            }
+        });
+
+        window.addEventListener('touchend', () => {
+            document.body.style.overflow = ''; // Restore overflow when touch ends
+        });
+    </script>
+    
 
  <div class="clickable-area area1" onclick="location.href='cards/AC.png';"></div>
  <div class="clickable-area area2" onclick="location.href='cards/AH.png';"></div>
