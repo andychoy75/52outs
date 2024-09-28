@@ -29,6 +29,13 @@ Tips for Performance
     Practice using the webpage to ensure you can quickly and efficiently access the cards you need.
     To reset, click on your browsers BACK button. Swipe down and up to hide the menu bar.
 
+Tips to Optimize the Display
+
+    Go to Settings>Safari
+    Select Single Tab display
+    Turn off "Allow Website Tinting"
+    Save the URL to Favorites to have available at all times on your home screen
+
 Conclusion
 
 This 52 Outs webpage is designed to streamline your performance and provide you with instant access to card images. Enjoy the convenience of having all the cards at your fingertips, and have a fantastic performance!
