@@ -17,11 +17,12 @@
             position: absolute;
             cursor: pointer;
             background-color: rgba(255, 255, 255, 0); /* Transparent background */
-            border: 2px dashed rgba(255, 0, 0, 0.7);  /* Red dashed border */
+            border: 2px dashed rgba(255, 0, 0, 0);  /* Transparent dashed border */
         }
-        .clickable-area:hover {
-            background-color: rgba(255, 0, 0, 0.1); /* Light red background on hover */
-        }
+/*        .clickable-area:hover {
+            background-color: rgba(255, 0, 0, 0.1);
+        }   Light red background on hover */
+        
         /* Define positions for each clickable area */
         .area1 { top: 28px; left: 28px; width: 57px; height: 58px; }
         .area2 { top: 28px; left: 112px; width: 57px; height: 58px; }
@@ -79,7 +80,7 @@
         .area53 { top: 734px; left: 28px; width: 310px; height: 16px; }
         .indicator {
             position: absolute;
-            top: 10px;
+            top: 30px;
             left: 10px;
             width: 10px;
             height: 10px;
@@ -160,7 +161,7 @@
                 if (area !== executeButton) { // Ignore clicks on the execute area
                     selectedUrl = area.getAttribute('data-url');
                     clickableAreas.forEach(a => a.style.backgroundColor = 'rgba(255, 255, 255, 0)'); // Reset background
-                    area.style.backgroundColor = 'rgba(255, 0, 0, 0.2)'; // Highlight selected area
+                    area.style.backgroundColor = 'rgba(255, 0, 0, 0)'; // Highlight selected area
                     indicator.style.display = 'block'; // Show the red dot
                 } else {
                     // Execute navigation
