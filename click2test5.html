@@ -14,7 +14,7 @@
             position: relative;
         }
         .clickable-area {
-            position: relative;            
+            position: absolute;            
             cursor: pointer;
             background-color: rgba(255, 255, 255, 0); /* Transparent background */
             border: 2px dashed rgba(255, 0, 0, 0.7);  /* Red dashed border */
@@ -24,10 +24,9 @@
         }
         /* Define positions for each clickable area */
         .area1 { top: 28px left: 28px width: 57px height: 58px }
-        .area2 { top: 0px left: 112px width: 57px height: 58px }
-        .area3 { top: 0px left: 200px width: 57px height: 58px }
-        .area4 { top: 0px left: 284px width: 57px height: 58px }
-
+        .area2 { top: 28px left: 112px width: 57px height: 58px }
+        .area3 { top: 28px left: 200px width: 57px height: 58px }
+        .area4 { top: 28px left: 284px width: 57px height: 58px }
         .area5 { top: 86px; left: 28px; width: 57px; height: 35px; }
         .area6 { top: 86px; left: 112px; width: 57px; height: 35px; }
         .area7 { top: 86px; left: 200px; width: 57px; height: 35px; }
@@ -144,7 +143,7 @@
 <!--    <div class="clickable-area area50" data-url="cards/KH.png"></div> -->
     <div class="clickable-area area51" data-url="cards/KS.png"></div>
     <div class="clickable-area area52" data-url="cards/KD.png"></div>
-    <div class="clickable-area execute-area" id="executeButton">GoP</div> <!-- Execute area -->
+    <div class="clickable-area execute-area" id="executeButton">GoQ</div> <!-- Execute area -->
     <div class="clickable-area area53" data-url="README.md"></div>
 
     <div class="indicator" id="indicator"></div> <!-- Red dot indicator -->
