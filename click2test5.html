@@ -143,7 +143,7 @@
 <!--    <div class="clickable-area area50" data-url="cards/KH.png"></div> -->
     <div class="clickable-area area51" data-url="cards/KS.png"></div>
     <div class="clickable-area area52" data-url="cards/KD.png"></div>
-    <div class="clickable-area execute-area" id="executeButton">GoM</div> <!-- Execute area -->
+    <div class="clickable-area execute-area" id="executeButton">GoN</div> <!-- Execute area -->
     <div class="clickable-area area53" data-url="README.md"></div>
 
     <div class="indicator" id="indicator"></div> <!-- Red dot indicator -->
@@ -199,35 +199,6 @@
                 }
             });
         });
-<!--
-        window.addEventListener('touchstart', (event) => {
-            if (event.touches.length > 0) {
-                touchStartY = event.touches[0].clientY;
-            }
-        });
-
-        window.addEventListener('touchmove', (event) => {
-            if (event.touches.length > 0) {
-                const currentY = event.touches[0].clientY;
-                const swipeDistance = touchStartY - currentY;
-
-                // Detect swipe up
-                if (swipeDistance > 30) {
-                    console.log("Swiped up");
-                    // Prevent default behavior to allow click events
-                    event.preventDefault();
-                }
-            }
-        });
-
-        window.addEventListener('touchend', () => {
-            // Reset the indicator and selection on touch end
-            indicator.style.display = 'none';
-            clickableAreas.forEach(a => a.style.backgroundColor = 'rgba(255, 255, 255, 0)');
-            selectedUrl = ''; // Clear selected URL
-        });
-
--->
         
     </script>
 
