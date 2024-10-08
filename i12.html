@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<!-- 844 point height compatible with iPhone 14, 13, 13 Pro, 12, 12 Pro -->
+
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1.0">
+    <title>52outs</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://andychoy75.github.io/52outs/ioscrop3.png'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: top;
+            position: relative;
+        }
+        .clickable-area {
+            position: absolute;
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0); /* Transparent background */
+            border: 2px dashed rgba(255, 0, 0, 0);  /* Transparent dashed border */
+        }
+/*        .clickable-area:hover {
+            background-color: rgba(255, 0, 0, 0.1);
+        }   Light red background on hover */
+        
+        /* Define positions for each clickable area */
+        .area1 { top: 29px; left: 8%; width: 15%; height: 62px; }
+        .area2 { top: 29px; left: 31%; width: 15%; height: 62px; }
+        .area3 { top: 29px; left: 54%; width: 15%; height: 62px; }
+        .area4 { top: 29px; left: 77%; width: 15%; height: 62px; }
+        .area5 { top: 89px; left: 8%; width: 15%; height: 36px; }
+        .area6 { top: 89px; left: 31%; width: 15%; height: 36px; }
+        .area7 { top: 89px; left: 54%; width: 15%; height: 36px; }
+        .area8 { top: 89px; left: 77%; width: 15%; height: 36px; }
+        .area9 { top: 126px; left: 8%; width: 15%; height: 62px; }
+        .area10 { top: 126px; left: 31%; width: 15%; height: 62px; }
+        .area11 { top: 126px; left: 54%; width: 15%; height: 62px; }
+        .area12 { top: 126px; left: 77%; width: 15%; height: 62px; }
+        .area13 { top: 186px; left: 8%; width: 15%; height: 36px; }
+        .area14 { top: 186px; left: 31%; width: 15%; height: 36px; }
+        .area15 { top: 186px; left: 54%; width: 15%; height: 36px; }
+        .area16 { top: 186px; left: 77%; width: 15%; height: 36px; }
+        .area17 { top: 222px; left: 8%; width: 15%; height: 62px; }
+        .area18 { top: 222px; left: 31%; width: 15%; height: 62px; }
+        .area19 { top: 222px; left: 54%; width: 15%; height: 62px; }
+        .area20 { top: 222px; left: 77%; width: 15%; height: 62px; }
+        .area21 { top: 283px; left: 8%; width: 15%; height: 36px; }
+        .area22 { top: 283px; left: 31%; width: 15%; height: 36px; }
+        .area23 { top: 283px; left: 54%; width: 15%; height: 36px; }
+        .area24 { top: 283px; left: 77%; width: 15%; height: 36px; }
+        .area25 { top: 319px; left: 8%; width: 15%; height: 62px; }
+        .area26 { top: 319px; left: 31%; width: 15%; height: 62px; }
+        .area27 { top: 319px; left: 54%; width: 15%; height: 62px; }
+        .area28 { top: 319px; left: 77%; width: 15%; height: 62px; }
+        .area29 { top: 379px; left: 8%; width: 15%; height: 36px; }
+        .area30 { top: 379px; left: 31%; width: 15%; height: 36px; }
+        .area31 { top: 379px; left: 54%; width: 15%; height: 36px; }
+        .area32 { top: 379px; left: 77%; width: 15%; height: 36px; }
+        .area33 { top: 416px; left: 8%; width: 15%; height: 62px; }
+        .area34 { top: 416px; left: 31%; width: 15%; height: 62px; }
+        .area35 { top: 416px; left: 54%; width: 15%; height: 62px; }
+        .area36 { top: 416px; left: 77%; width: 15%; height: 62px; }
+        .area37 { top: 460px; left: 8%; width: 15%; height: 36px; }
+        .area38 { top: 460px; left: 31%; width: 15%; height: 36px; }
+        .area39 { top: 460px; left: 54%; width: 15%; height: 36px; }
+        .area40 { top: 460px; left: 77%; width: 15%; height: 36px; }
+        .area41 { top: 515px; left: 8%; width: 15%; height: 62px; }
+        .area42 { top: 515px; left: 31%; width: 15%; height: 62px; }
+        .area43 { top: 515px; left: 54%; width: 15%; height: 62px; }
+        .area44 { top: 515px; left: 77%; width: 15%; height: 62px; }
+        .area45 { top: 575px; left: 8%; width: 15%; height: 102px; }
+        .area46 { top: 575px; left: 31%; width: 15%; height: 102px; }
+        .area47 { top: 575px; left: 54%; width: 15%; height: 102px; }
+        .area48 { top: 575px; left: 77%; width: 15%; height: 102px; }
+        .area49 { top: 677px; left: 8%; width: 15%; height: 78px; }
+/*        .area50 { top: 677px; left: 31%; width: 15%; height: 78px; } */
+        .execute-area { top: 677px; left: 31%; width: 15%; height: 78px; }
+        .area51 { top: 677px; left: 54%; width: 15%; height: 78px; }
+        .area52 { top: 677px; left: 77%; width: 15%; height: 78px; }
+        .area53 { top: 755px; left: 8%; width: 84%; height: 15px; }
+        .indicator {
+            position: absolute;
+            top: 30px;
+            left: 10px;
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            border-radius: 50%;
+            display: none; /* Hidden by default */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="clickable-area area1" data-url="cards/AC.png"></div>
+    <div class="clickable-area area2" data-url="cards/AH.png"></div>
+    <div class="clickable-area area3" data-url="cards/AS.png"></div>
+    <div class="clickable-area area4" data-url="cards/AD.png"></div>
+    <div class="clickable-area area5" data-url="cards/2C.png"></div>
+    <div class="clickable-area area6" data-url="cards/2H.png"></div>
+    <div class="clickable-area area7" data-url="cards/2S.png"></div>
+    <div class="clickable-area area8" data-url="cards/2D.png"></div>
+    <div class="clickable-area area9" data-url="cards/3C.png"></div>
+    <div class="clickable-area area10" data-url="cards/3H.png"></div>
+    <div class="clickable-area area11" data-url="cards/3S.png"></div>
+    <div class="clickable-area area12" data-url="cards/3D.png"></div>
+    <div class="clickable-area area13" data-url="cards/4C.png"></div>
+    <div class="clickable-area area14" data-url="cards/4H.png"></div>
+    <div class="clickable-area area15" data-url="cards/4S.png"></div>
+    <div class="clickable-area area16" data-url="cards/4D.png"></div>
+    <div class="clickable-area area17" data-url="cards/5C.png"></div>
+    <div class="clickable-area area18" data-url="cards/5H.png"></div>
+    <div class="clickable-area area19" data-url="cards/5S.png"></div>
+    <div class="clickable-area area20" data-url="cards/5D.png"></div>
+    <div class="clickable-area area21" data-url="cards/6C.png"></div>
+    <div class="clickable-area area22" data-url="cards/6H.png"></div>
+    <div class="clickable-area area23" data-url="cards/6S.png"></div>
+    <div class="clickable-area area24" data-url="cards/6D.png"></div>
+    <div class="clickable-area area25" data-url="cards/7C.png"></div>
+    <div class="clickable-area area26" data-url="cards/7H.png"></div>
+    <div class="clickable-area area27" data-url="cards/7S.png"></div>
+    <div class="clickable-area area28" data-url="cards/7D.png"></div>
+    <div class="clickable-area area29" data-url="cards/8C.png"></div>
+    <div class="clickable-area area30" data-url="cards/8H.png"></div>
+    <div class="clickable-area area31" data-url="cards/8S.png"></div>
+    <div class="clickable-area area32" data-url="cards/8D.png"></div>
+    <div class="clickable-area area33" data-url="cards/9C.png"></div>
+    <div class="clickable-area area34" data-url="cards/9H.png"></div>
+    <div class="clickable-area area35" data-url="cards/9S.png"></div>
+    <div class="clickable-area area36" data-url="cards/9D.png"></div>
+    <div class="clickable-area area37" data-url="cards/10C.png"></div>
+    <div class="clickable-area area38" data-url="cards/10H.png"></div>
+    <div class="clickable-area area39" data-url="cards/10S.png"></div>
+    <div class="clickable-area area40" data-url="cards/10D.png"></div>
+    <div class="clickable-area area41" data-url="cards/JC.png"></div>
+    <div class="clickable-area area42" data-url="cards/JH.png"></div>
+    <div class="clickable-area area43" data-url="cards/JS.png"></div>
+    <div class="clickable-area area44" data-url="cards/JD.png"></div>
+    <div class="clickable-area area45" data-url="cards/QC.png"></div>
+    <div class="clickable-area area46" data-url="cards/QH.png"></div>
+    <div class="clickable-area area47" data-url="cards/QS.png"></div>
+    <div class="clickable-area area48" data-url="cards/QD.png"></div>
+    <div class="clickable-area area49" data-url="cards/KC.png"></div>
+<!--    <div class="clickable-area area50" data-url="cards/KH.png"></div> -->
+    <div class="clickable-area area51" data-url="cards/KS.png"></div>
+    <div class="clickable-area area52" data-url="cards/KD.png"></div>
+    <div class="clickable-area area53" onclick="location.href='https://andychoy75.github.io/52outs/README.md';"></div>
+    <div class="clickable-area execute-area" id="executeButton"></div> <!-- Execute area -->
+    <div class="indicator" id="indicator"></div> <!-- Red dot indicator -->
+
+
+    <script>
+        const clickableAreas = document.querySelectorAll('.clickable-area');
+        const executeButton = document.getElementById('executeButton');
+        const indicator = document.getElementById('indicator');
+        let selectedUrl = '';
+        let touchStartY = 0;
+
+        clickableAreas.forEach(area => {
+            area.addEventListener('click', () => {
+                if (area !== executeButton) { // Ignore clicks on the execute area
+                    selectedUrl = area.getAttribute('data-url');
+                    clickableAreas.forEach(a => a.style.backgroundColor = 'rgba(255, 255, 255, 0)'); // Reset background
+                    area.style.backgroundColor = 'rgba(255, 0, 0, 0)'; // Highlight selected area
+                    indicator.style.display = 'block'; // Show the red dot
+                } else {
+                    // Execute navigation
+                    if (selectedUrl) {
+                        window.location.href = selectedUrl;
+                    } else {
+                        // Default URL if no area is selected
+                        window.location.href = "cards/KH.png";
+                    }
+                }
+            });
+        });
+
+        // Touch event listeners for swipe detection
+        window.addEventListener('touchstart', (event) => {
+            if (event.touches.length > 0) {
+                lastY = event.touches[0].clientY;
+            }
+        });
+
+        window.addEventListener('touchmove', (event) => {
+            if (event.touches.length > 0) {
+                const currentY = event.touches[0].clientY;
+                const swipeDistance = lastY - currentY;
+
+                // Detect swipe up (you can adjust the threshold)
+                if (swipeDistance > 30) {
+                    resetSelection(); // Reset selection and hide the red dot
+                }
+                lastY = currentY;
+            }
+        });
+
+        function resetSelection() {
+            selectedUrl = ''; // Reset the selected URL
+            indicator.style.display = 'none'; // Hide the red dot
+            clickableAreas.forEach(a => a.style.backgroundColor = 'rgba(255, 255, 255, 0)'); // Reset all areas
+        }
+    
+    </script>
+
+    
+
+</body>
+</html>
